@@ -346,10 +346,11 @@ class ReviewViewSet(viewsets.ModelViewSet):
         serializer = self.serializer_class(
             review, data=self.request.data, partial=True
         )
-        # if serializer.is_valid(raise_exception=True):
-        #     serializer.save()
-        #     return Response(serializer.data, status=status.HTTP_200_OK)
-
+        if serializer.is_valid(raise_exception=True):
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return None
+    
     def destroy(self, request, pk, title_id):
         if not Title.objects.filter(id=title_id).exists():
             return Response(

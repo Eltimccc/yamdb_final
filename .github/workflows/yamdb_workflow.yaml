@@ -50,7 +50,7 @@ jobs:
           push: true
           tags: eltimccc/api_yamdb:latest
 
-# Deploy again again.
+# Deploy again again еще.
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub

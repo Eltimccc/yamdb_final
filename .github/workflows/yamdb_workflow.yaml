@@ -59,7 +59,6 @@ jobs:
         run: |
           ls
           pwd
-          cd: eltimccc/
       - name: executing remote ssh commands to deploy
         uses: appleboy/ssh-action@master
         with:

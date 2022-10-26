@@ -57,8 +57,8 @@ jobs:
     steps:
       - name: LS_PWD
         run: |
-          pwd
           ls
+          pwd
       - name: executing remote ssh commands to deploy
         uses: appleboy/ssh-action@master
         with:

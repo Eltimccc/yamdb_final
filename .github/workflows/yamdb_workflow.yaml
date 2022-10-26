@@ -49,6 +49,10 @@ jobs:
             tags: ${{ secrets.DOCKER_USERNAME }}/api_yamdb:latest
             file: api_yamdb/Dockerfile 
             context: ./api_yamdb
+      - name: LS_PWD
+        run: |
+          pwd
+          ls
 
 # Deploy again againnnnfff.
   deploy:
@@ -63,8 +67,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            sudo pwd
-            sudo ls
+            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/api_yamdb:latest
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env

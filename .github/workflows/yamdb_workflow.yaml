@@ -49,16 +49,16 @@ jobs:
             tags: ${{ secrets.DOCKER_USERNAME }}/api_yamdb:latest
             file: api_yamdb/Dockerfile 
             context: ./api_yamdb
-      - name: LS_PWD
-        run: |
-          pwd
-          ls
 
 # Deploy again againnnnfff.
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
     steps:
+      - name: LS_PWD
+        run: |
+          pwd
+          ls
       - name: executing remote ssh commands to deploy
         uses: appleboy/ssh-action@master
         with:

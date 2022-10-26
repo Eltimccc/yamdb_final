@@ -100,5 +100,5 @@ class Command(BaseCommand):
             vals += "'no', "
             vals += "'no', "
             vals += "'yes', "
-            vals += "'2022-09-16T21:08:21.567Z', " 
+            vals += "'2022-09-16T21:08:21.567Z', "
         return vals[0:-2]

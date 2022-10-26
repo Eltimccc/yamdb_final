@@ -64,7 +64,6 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/api_yamdb:latest
-          run: |
             sudo pwd
             sudo ls
             sudo docker-compose stop

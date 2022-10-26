@@ -72,7 +72,7 @@ class Command(BaseCommand):
             sql_hdr = f"INSERT INTO `{tbl_t}` ({', '.join(row)})"
         else:
             sql_hdr = f"INSERT INTO `{tbl_t}`"
-        return
+        return sql_hdr
 
     def data_handler(self, row, file_name):
         """
@@ -102,4 +102,4 @@ class Command(BaseCommand):
             vals += "'yes', "
             vals += "'2022-09-16T21:08:21.567Z', "
         sql_fld_values = vals[0:-2]
-        return
+        return sql_fld_values

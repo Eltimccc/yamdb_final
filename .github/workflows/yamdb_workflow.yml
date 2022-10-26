@@ -64,9 +64,9 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }} # Если ваш ssh-ключ защищён фразой-паролем
         script: |
           sudo docker pull ${{ secrets.USER }}/api_yamdb:latest
-          ls
-          sudo docker-compose stop $(sudo docker ps -a -q)
-          sudo docker-compose up -d
+        # ls
+          # sudo docker-compose stop $(sudo docker ps -a -q)
+          # sudo docker-compose up -d
   
   send_message:
     runs-on: ubuntu-latest

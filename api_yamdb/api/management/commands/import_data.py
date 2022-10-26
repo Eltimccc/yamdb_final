@@ -100,6 +100,5 @@ class Command(BaseCommand):
             vals += "'no', "
             vals += "'no', "
             vals += "'yes', "
-            vals += "'2022-09-16T21:08:21.567Z', "
-        sql_fld_values = vals[0:-2]
-        return sql_fld_values
+            vals += "'2022-09-16T21:08:21.567Z', " 
+        return vals[0:-2]

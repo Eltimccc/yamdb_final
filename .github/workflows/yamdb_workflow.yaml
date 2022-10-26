@@ -46,7 +46,7 @@ jobs:
         # Пуш образа в Docker Hub 
         uses: docker/build-push-action@v2 
         with:
-          context: home/api_yamdb/
+          context: api_yamdb/
           push: true
           tags: eltimccc/api_yamdb:latest
 

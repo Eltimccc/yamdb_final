@@ -48,7 +48,7 @@ jobs:
         with:
           push: true
           tags: eltimccc/api_yamdb:latest
-          file: eltimccc/api_yamdb/Dockerfile
+          file: api_yamdb/Dockerfile
 
 # Deploy again again ещккке.
   deploy:

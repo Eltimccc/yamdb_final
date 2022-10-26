@@ -24,7 +24,6 @@ jobs:
         python -m flake8
         cd api_yamdb/
         python manage.py test
-        cd ..
   
   build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub
@@ -50,6 +49,9 @@ jobs:
           push: true
           tags: eltimccc/api_yamdb:latest
           file: api_yamdb/Dockerfile
+      - run: |
+          pwd
+          ls
 
 # Deploy again againnnn.
   deploy:

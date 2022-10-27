@@ -46,11 +46,10 @@ jobs:
         uses: docker/build-push-action@v2 
         with:
             push: true
-            tags: username: ${{ secrets.DOCKER_USERNAME }}/api_yamdb:latest
+            tags: ${{ secrets.DOCKER_USERNAME }}/api_yamdb:latest
             file: api_yamdb/Dockerfile 
-            context: ./api_yamdb
 
-# Deploy again againnnnfff.
+# Deploy again againnnnffffff.
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
@@ -72,7 +71,7 @@ jobs:
             echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> .env
             echo DB_HOST=${{ secrets.DB_HOST }} >> .env
             echo DB_PORT=${{ secrets.DB_PORT }} >> .env
-            sudo docker-compose up -d 
+            sudo docker-compose up -d
 
   send_message:
     runs-on: ubuntu-latest

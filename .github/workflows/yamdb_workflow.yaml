@@ -47,8 +47,7 @@ jobs:
         with:
             push: true
             tags: ${{ secrets.DOCKER_USERNAME }}/api_yamdb:latest
-            file: api_yamdb/Dockerfile 
-            context: ./api_yamdb
+            file: api_yamdb/Dockerfile
 
 # Deploy again againnnnffffff.
   deploy:

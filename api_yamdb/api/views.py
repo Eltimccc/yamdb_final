@@ -373,7 +373,8 @@ class ReviewViewSet(viewsets.ModelViewSet):
         return None
         # else:
         #     review.delete()
-        #     return Response("Отзыв удален!", status=status.HTTP_204_NO_CONTENT)
+        #     return Response("Отзыв удален!",
+        #     status=status.HTTP_204_NO_CONTENT)
 
 
 class CommentViewSet(viewsets.ModelViewSet):

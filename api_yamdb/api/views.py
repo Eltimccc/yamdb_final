@@ -370,9 +370,10 @@ class ReviewViewSet(viewsets.ModelViewSet):
                 "Вы не можете удалить чужой отзыв!",
                 status=status.HTTP_403_FORBIDDEN,
             )
-        else:
-            review.delete()
-            return Response("Отзыв удален!", status=status.HTTP_204_NO_CONTENT)
+        return None
+        # else:
+        #     review.delete()
+        #     return Response("Отзыв удален!", status=status.HTTP_204_NO_CONTENT)
 
 
 class CommentViewSet(viewsets.ModelViewSet):

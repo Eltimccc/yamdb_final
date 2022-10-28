@@ -48,6 +48,7 @@ jobs:
             push: true
             tags: ${{ secrets.DOCKER_USERNAME }}/api_yamdb:latest
             file: api_yamdb/Dockerfile 
+# 11
 
   deploy:
     runs-on: ubuntu-latest

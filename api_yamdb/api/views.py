@@ -366,7 +366,7 @@ class ReviewViewSet(viewsets.ModelViewSet):
         review_author = review.author
         cur_user_group = cur_user.role
         if cur_user_group == USER and cur_user != review_author:
-            return Response(
+            Response(
                 "Вы не можете удалить чужой отзыв!",
                 status=status.HTTP_403_FORBIDDEN,
             )
@@ -468,7 +468,7 @@ class CommentViewSet(viewsets.ModelViewSet):
         comment = comment.first()
         comment_author = comment.author
         if cur_user_group == USER and cur_user != comment_author:
-            return Response(
+            Response(
                 "Вы не можете удалить чужой комментарий!",
                 status=status.HTTP_403_FORBIDDEN,
             )
